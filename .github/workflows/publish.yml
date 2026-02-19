@@ -1,18 +1,21 @@
-name: Publish Package
+name: Release
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -21,10 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build package
+      - name: Build
         run: npm run build
 
-      - name: Publish to npm
-        run: npm publish --access public
+      - name: Run semantic-release
+        run: npx semantic-release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
