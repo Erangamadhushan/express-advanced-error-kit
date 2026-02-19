@@ -2,6 +2,12 @@
 
 Advanced TypeScript-based error handling middleware for Express.js.
 
+![npm version](https://img.shields.io/npm/v/express-advanced-error-kit)
+![npm downloads](https://img.shields.io/npm/dm/express-advanced-error-kit)
+
+![CI](https://github.com/Erangamadhushan/express-advanced-error-kit/actions/workflows/ci.yml/badge.svg)
+
+
 ## Features
 
 - Async handler wrapper
