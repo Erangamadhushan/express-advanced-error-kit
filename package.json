@@ -1,0 +1,36 @@
+{
+  "name": "express-advanced-error-kit",
+  "version": "1.0.0",
+  "description": "Advanced TypeScript error handling middleware for Express applications.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erangamadhushan/express-advanced-error-kit.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "error-handler",
+    "typescript"
+  ],
+  "author": "Eranga Madhushan",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Erangamadhushan/express-advanced-error-kit/issues"
+  },
+  "homepage": "https://github.com/Erangamadhushan/express-advanced-error-kit#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
