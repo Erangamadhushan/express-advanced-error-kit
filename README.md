@@ -52,3 +52,28 @@ app.use(errorMiddleware);
 app.listen(5000);
 
 ```
+
+# Features
+
+## Logger Integration (Production-Ready)
+
+### Usage Example
+
+```ts
+import pino from "pino";
+const logger = pino();
+
+app.use(
+  errorMiddleware({
+    logger: logger.error.bind(logger),
+    showStack: true
+  })
+);
+```
+
+### Now it supports:
+
+- console
+- winston
+- pino
+- custom logger
