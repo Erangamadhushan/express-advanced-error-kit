@@ -21,9 +21,22 @@ export const errorMiddleware =
 
     if (options.logger) {
       options.logger(err);
+    } else {
+      console.error(err);
     }
-    else {
-         console.error(err);
+
+    const handleMongoError = (err: any) => {
+      if (err?.code === 11000) {
+        const field = Object.keys(err.keyValue || {})[0];
+        return new ApiError(400, `Duplicate value for field: ${field}`);
+      }
+      return null;
+    };
+
+    const mongoError = handleMongoError(err);
+    if (mongoError) {
+      statusCode = mongoError.statusCode;
+      message = mongoError.message;
     }
 
     res.status(statusCode).json({
