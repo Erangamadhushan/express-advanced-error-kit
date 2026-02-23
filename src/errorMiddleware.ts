@@ -33,11 +33,37 @@ export const errorMiddleware =
       return null;
     };
 
+    const handleZodError = (err: any) => {
+      if (err?.name === "ZodError") {
+        const message = err.errors
+          .map((e: any) => `${e.path.join(".")}: ${e.message}`)
+          .join(", ");
+        return new ApiError(400, message);
+      }
+      return null;
+    };
+
     const mongoError = handleMongoError(err);
     if (mongoError) {
       statusCode = mongoError.statusCode;
       message = mongoError.message;
     }
+
+    const zodError = handleZodError(err);
+    if (zodError) {
+      statusCode = zodError.statusCode;
+      message = zodError.message;
+    }
+
+    statusCode =
+      mongoError instanceof ApiError ? mongoError.statusCode : zodError instanceof ApiError ? zodError.statusCode : 500;
+
+    message =
+      mongoError instanceof ApiError
+        ? mongoError.message
+        : zodError instanceof ApiError
+          ? zodError.message
+          : "Internal Server Error";
 
     res.status(statusCode).json({
       success: false,
