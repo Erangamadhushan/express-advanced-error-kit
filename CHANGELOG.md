@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.2.0...v1.3.0) (2026-02-23)
+
+
+### Features
+
+* enhance error handling for MongoDB duplicate key errors ([4da0312](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/4da0312069b91ed823a198b7b5d67ba329945f4e))
+
 # [1.2.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.1.0...v1.2.0) (2026-02-19)
 
 

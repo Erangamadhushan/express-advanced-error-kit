@@ -1,6 +1,6 @@
 {
   "name": "@erangamadhushan/express-advanced-error-kit",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Advanced TypeScript error handling middleware for Express applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
