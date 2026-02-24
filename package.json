@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/Erangamadhushan/express-advanced-error-kit#readme",
   "peerDependencies": {
-    "zod": "^3.0.0"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -48,7 +48,7 @@
     "ts-jest": "^29.4.6",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
-    "zod": "^3.0.0"
+    "zod": "^4.3.6"
   },
   "dependencies": {
     "zod": "^4.3.6"
