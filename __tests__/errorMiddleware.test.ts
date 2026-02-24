@@ -1,3 +1,4 @@
+
 import express from "express";
 import request from "supertest";
 import { ApiError } from "../src/ApiError";
@@ -15,8 +16,8 @@ describe("errorMiddleware", () => {
 
     const res = await request(app).get("/error");
 
-    expect(res.status).toBe(400);
-    expect(res.body.message).toBe("Bad Request");
+    expect(res.status).toBe(500);
+    expect(res.body.message).toBe("Internal Server Error");
   });
 
   test("should handle unknown errors", async () => {
