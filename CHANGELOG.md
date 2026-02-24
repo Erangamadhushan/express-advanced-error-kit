@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.3.0...v1.4.0) (2026-02-24)
+
+
+### Features
+
+* add mongo and zod smart error parsing ([602eb5b](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/602eb5b0134abcef2f7309d36587f05817397a3a))
+* add tests for handling MongoDB duplicate key and Zod validation errors ([2edd2d2](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/2edd2d23049aef64b3cd1542cc11de76a66afcef))
+* update error handling tests and improve TypeScript configuration for testing ([eb5f212](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/eb5f212aebe1f6741da83b2ef3a0ce6e78337355))
+
 # [1.3.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.2.0...v1.3.0) (2026-02-23)
 
 
