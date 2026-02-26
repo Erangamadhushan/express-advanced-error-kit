@@ -55,16 +55,6 @@ export const errorMiddleware =
       message = zodError.message;
     }
 
-    statusCode =
-      mongoError instanceof ApiError ? mongoError.statusCode : zodError instanceof ApiError ? zodError.statusCode : 500;
-
-    message =
-      mongoError instanceof ApiError
-        ? mongoError.message
-        : zodError instanceof ApiError
-          ? zodError.message
-          : "Internal Server Error";
-
     res.status(statusCode).json({
       success: false,
       statusCode,

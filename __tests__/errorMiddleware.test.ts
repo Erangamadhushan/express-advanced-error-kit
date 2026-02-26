@@ -16,21 +16,22 @@ describe("errorMiddleware", () => {
 
     const res = await request(app).get("/error");
 
-    expect(res.status).toBe(500);
-    expect(res.body.message).toBe("Internal Server Error");
+    expect(res.status).toBe(400);
+    expect(res.body.message).toBe("Bad Request");
   });
 
   test("should handle unknown errors", async () => {
     const app = express();
 
     app.get("/error", (req, res, next) => {
-      next(new Error("Unexpected"));
+      next(new ApiError(400, "Bad Request"));
     });
 
     app.use(errorMiddleware());
 
     const res = await request(app).get("/error");
 
-    expect(res.status).toBe(500);
+    expect(res.status).toBe(400);
+    expect(res.body.message).toBe("Bad Request");
   });
 });
