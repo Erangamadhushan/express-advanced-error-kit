@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.4.0...v1.4.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* update error handling tests to correctly assert ApiError responses ([d412c68](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/d412c6830140108f6aba9e0b81f0d7075404d0bd))
+
 # [1.4.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.3.0...v1.4.0) (2026-02-24)
 
 
