@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.4.1...v1.5.0) (2026-02-26)
+
+
+### Features
+
+* enhance demo application with MongoDB integration, Docker setup, and updated error handling ([c06e631](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/c06e631f5aac471a2970b5ad3d197b028e889ab2))
+* initialize express application with error handling and Zod validation ([516fb89](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/516fb89fe4dca9ce7443cccc97497c8c9dfd1107))
+
 ## [1.4.1](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.4.0...v1.4.1) (2026-02-26)
 
 
