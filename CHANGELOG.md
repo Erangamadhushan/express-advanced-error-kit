@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.5.0...v1.5.1) (2026-02-28)
+
+
+### Bug Fixes
+
+* correct ApiError instantiation and enhance README with configuration options ([f28d692](https://github.com/Erangamadhushan/express-advanced-error-kit/commit/f28d6922b253f3850a7dc9d2cf072c3274ef0ed7))
+
 # [1.5.0](https://github.com/Erangamadhushan/express-advanced-error-kit/compare/v1.4.1...v1.5.0) (2026-02-26)
 
 
