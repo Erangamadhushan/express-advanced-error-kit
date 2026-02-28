@@ -45,7 +45,7 @@ app.use(express.json());
 app.get(
   "/error",
   asyncHandler(async () => {
-    throw new ApiError("Something went wrong", 400);
+    throw new ApiError(400, "Something went wrong");
   }),
 );
 
@@ -127,6 +127,7 @@ throw new ApiError(404, "User not found");
 ```
 
 Also You can extend it:
+
 ```ts
 class ValidationError extends ApiError {
   constructor(message: string) {
@@ -136,6 +137,7 @@ class ValidationError extends ApiError {
 ```
 
 # ⚙️ Configuration Options
+
 ```ts
 errorMiddleware({
   logger?: (error: any) => void;
@@ -149,3 +151,9 @@ errorMiddleware({
 - Clean JSON response format
 - Centralized error control
 
+🔄 Automated Releases
+
+- Conventional commits
+- semantic-release
+- GitHub Actions CI
+- Automatic versioning and changelog generation
